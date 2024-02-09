@@ -44,6 +44,7 @@ const unknownEndpoint = (request, response) => {
 
 app.use(cors())
 app.use(express.json())
+app.use(express.static('dist'))
 app.use(requestLogger)
 
 app.get('/', (_, response) => {
@@ -97,5 +98,5 @@ app.use(unknownEndpoint)
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`)
+    console.log(`Server running on http://localhost:${PORT}`)
 })
