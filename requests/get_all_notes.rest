@@ -1,1 +1,19 @@
 GET http://localhost:3001/api/notes
+
+###
+
+GET http://localhost:3001/api/notes/someInvalidId
+
+###
+
+DELETE  http://localhost:3001/api/notes/65ca101fe5344f14b14a0990
+
+###
+
+PUT http://localhost:3001/api/notes/65cca926f06cb9d79c13c27e
+Content-Type: application/json
+
+{
+    "content": "one",
+    "important": true
+}
